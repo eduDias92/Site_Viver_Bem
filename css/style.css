@@ -759,3 +759,8 @@ opacity: .5; }
 .border-right{border: none;}
 
 }
+.imagem_pilates{
+    width: 750px;
+    object-fit: cover;
+    object-position:  top;
+}
