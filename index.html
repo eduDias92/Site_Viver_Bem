@@ -10,14 +10,22 @@
     <meta name="keywords" content="">
     <title>Viver Bem | Fisioterapia e Pilates</title>
     <!-- Bootstrap -->
+    <!-- Carrossel -->
+    <link href="css/carrossel.css" rel="stylesheet" >
+    <link href="css/tema_carrossel.css" rel="stylesheet">
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    
     <!-- Style -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/slider-carousel.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -25,8 +33,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
- 
-
 <body>
     <div class="header-top">
         <!-- header-top-->
@@ -84,14 +90,17 @@
         </div>
     </div>
     <div class="hero-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 carousel">
+        <div class="container-fluid no-padding">
+            <div class="owl-carousel">
+                <div class="hero-carousel" style="background: linear-gradient(rgba(36, 39, 38, 0.5), rgba(36, 39, 38, 0.5)), rgba(36, 39, 38, 0.5) url(images/slide1.jpg) no-repeat top; background-size: cover;">
                     <h1 class="hero-title">Viva bem!</h1>
                     <p class="hero-text">O dia começa e termina bem quando você faz pilates!
                     </p>
-                    <a href="contact.html" class="btn btn-default" id="btnSlider">Saiba mais!</a>
                 </div>
+                <div class="hero-carousel" style="background: linear-gradient(rgba(36, 39, 38, 0.5), rgba(36, 39, 38, 0.5)), rgba(36, 39, 38, 0.5) url(images/hero-img.jpg) no-repeat top; background-size: cover;">
+                    <h1 class="hero-title">Viva!</h1>
+                    <p class="hero-text">Tratamento de fisioterapia</p>
+                </div>    
             </div>
         </div>
     </div>
@@ -109,10 +118,10 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border-right">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 border-right ">
                     <div class="service-block">
                         <!-- service block -->
-                        <div class="service-img mb20">
+                        <div class="service-img mb20 animated fadeIn">
                             <!-- service img -->
                             <a href="#"><img src="images/fisioterapia.jpg" alt="" class="img-responsive"></a>
                         </div>
@@ -381,20 +390,26 @@
 
     <script src="js/jquery.sticky.js"></script>
     <script src="js/sticky-header.js"></script>
+    <script src="js/owlcarousel/owl.carousel.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            var position = 0;
-            $("#btnSlider").click(function(e){
-                e.preventDefault();
-                console.log(position);
-                if(position == 0){
-                    $('.hero-section').animate({'background-image': 'linear-gradient(rgba(36, 39, 38, 0.5), rgba(36, 39, 38, 0.5)), rgba(36, 39, 38, 0.5) url(../images/slide1.jpg) no-repeat top; background-size: cover;'},500);
-                    position = 1;
-                }else{
-                    $('.hero-section').animate({'background-image': 'url(../images/hero-img.jpg)'},300);
-                    position = 0;
-                }
+            
+            $('.owl-carousel').owlCarousel({
+                animateOut: 'fadeOut',
+                items:1,
+                margin:30,
+                stagePadding:0,
+                smartSpeed:450,
+                autoplay:true
             });
+            // $('.owl-carousel-3').owlCarousel({
+            //     animateOut: 'fadeOut',
+            //     items:3,
+            //     margin:30,
+            //     stagePadding:30,
+            //     smartSpeed:450,
+            //     autoplay:true
+            // });
         });
     </script>
 </body>

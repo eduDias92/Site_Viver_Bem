@@ -328,7 +328,8 @@ label { }
 /*--------------------------
     5.2 Navigations Regular
    ----------------------------*/
-.hero-section { padding-top: 135px; padding-bottom: 135px; background: linear-gradient(rgba(36, 39, 38, 0.5), rgba(36, 39, 38, 0.5)), rgba(36, 39, 38, 0.5) url(../images/slide1.jpg) no-repeat top; background-size: cover; }
+.hero-section { }
+.hero-carousel{ padding-left: 100px; padding-right: 100px; padding-top: 135px; padding-bottom: 135px; background: linear-gradient(rgba(36, 39, 38, 0.5), rgba(36, 39, 38, 0.5)), rgba(36, 39, 38, 0.5); background-size: cover;  }
 .hero-caption { padding-top: 100px; padding-bottom: 100px; }
 .hero-title { font-size: 46px; color: #fff; line-height: 50px; font-weight: 600; margin-bottom: 30px; letter-spacing: -1px; }
 .hero-text { font-size: 18px; color: #fff; margin-bottom: 30px; }
@@ -730,10 +731,12 @@ opacity: .5; }
 
 /* Custom sizes (768px to 1024px) */
 @media screen and (max-width:768px) {
+    .hero-carousel{ padding-left: 100px; padding-right: 100px; padding-top: 135px; padding-bottom: 135px;}
     .post-content { position: relative; width: 100%; right: 0px; top: 0px; }
     .navigation { float: none; }
     .comment-info {
      padding-left: 10px; 
+     
 }.childern .comment-info {
     padding-left: 10px;
 }
@@ -763,4 +766,7 @@ opacity: .5; }
     width: 750px;
     object-fit: cover;
     object-position:  top;
+}
+.no-padding{
+    padding: 0;
 }
